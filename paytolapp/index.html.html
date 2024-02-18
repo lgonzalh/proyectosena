@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayToll App Ver 1.0</title>
+  <style>
+    nav {
+      background-image: linear-gradient(to right, rgb(131, 136, 138), rgb(191, 201, 203));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
+
+    table {
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    th, td {
+      text-align: left; /* Left align by default */
+      padding: 0.5rem 1rem;
+    }
+
+    th:first-child {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    th:not(:first-child):not(:last-child) {
+      font-size: 12px;
+    }
+
+    /* Search form styling */
+    th:last-child {
+      text-align: right;
+    }
+
+    input[type="search"] {
+      padding: 0.5rem;
+    }
+
+    /* Main content styling */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem;
+    }
+
+    .column {
+      width: 45%;
+      text-align: center;
+    }
+
+    .column img {
+      margin: 1rem auto;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 200px;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .registro {
+      margin-top: 1rem;
+      text-decoration: underline;
+      color: blue;
+      cursor: pointer;
+    }
+
+    /* New global rule for consistent font */
+    body {
+      font-family: sans-serif; /* Or your desired font family */
+    }
+
+    /* Footer styling */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-image: linear-gradient(to right, rgb(131, 136, 138), rgb(191, 201, 203));
+      padding: 0.5rem 1rem;
+      color: #ffffff;
+    }
+
+    footer .icono {
+      width: 20px;
+      height: 20px;
+      margin-right: 0.5rem;
+    }
+
+    footer .redes-sociales {
+      display: flex;
+      gap: 1rem;
+    }
+
+    footer .redes-sociales a {
+      color: inherit;
+    }   
+  </style>
+</head>
+
+<body>
+  <nav>
+    <table>
+      <tr>
+        <th><img
+            src="https://firebasestorage.googleapis.com/v0/b/lantonium.appspot.com/o/sena%2Flogo.png?alt=media&token=87a263cc-c652-403b-9902-0ace2552823a"
+            alt="Logo" width="50" height="50" class="d-inline-block align-text-top" style="color: #ffffff;"> PayTollApp
+        </th>
+        <th style="color: #ffffff;">Acerca de Nosotros</th>
+        <th style="color: #ffffff;">Servicios</th>
+        <th style="color: #ffffff;">Contáctenos</th>
+        <th style="color: #ffffff;">Inicio</th>
+        <th>
+          <form action="#" method="get" class="d-flex">
+            <input type="search" name="q" placeholder="Buscar" aria-label="Buscar">
+            <button type="submit">Buscar</button>
+          </form>
+        </th>
+      </tr>
+    </table>
+  </nav>
+
+  <div class="container">
+    <div class="column">
+      <h2>Deja de hacer filas inalcanzables y aprovecha el tiempo en otras cosas</h2>
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/lantonium.appspot.com/o/sena%2Flogo.png?alt=media&token=87a263cc-c652-403b-9902-0ace2552823a"
+        alt="Logo" width="250" height="250">
+    </div>
+    <div class="column">
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/lantonium.appspot.com/o/sena%2Fusuario.png?alt=media&token=82394cb1-35d7-4283-8809-b569b28ccfa0"
+        alt="Registro" width="70" height="70">
+      <div class="form-container">
+        <input type="text" placeholder="Usuario">
+        <input type="password" placeholder="Contraseña">
+        <a href="#" class="registro">Nuevo Registro</a>
+        <h4>Registrate y sé parte de nuestra comunidad</h4>
+      </div>
+
+  
+    <footer>
+      <table>
+        <tr>
+          <td><img src="ubicacion.png" alt="Ubicación" width="30" height="30"> Colombia 2024 ©</td>
+          <td>Proyecto Sena ADSO 2023-2024</td>
+          <td>
+            <a href="#"><img src="facebook.png" alt="Facebook" width="30" height="30"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter" width="30" height="30"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram" width="30" height="30"></a>
+          </td>
+        </tr>
+      </table>
+    </footer>
+    </body>
+    </html>
+    
+      
+</body>
+
+</html>
