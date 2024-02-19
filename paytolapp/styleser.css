@@ -1,0 +1,62 @@
+/* Personalización del navbar */
+
+.navbar-dark .navbar-brand {
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.navbar-brand span {
+  font-size: 24px; /* Cambiar el tamaño de fuente según sea necesario */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffffff;
+}
+
+.bg-gradient {
+  background-color: #343a40;
+  background-image: linear-gradient(to right, #343a40 0%, #495057 50%, #a4acb4 100%);
+}
+
+/* Personalización del contenido */
+
+.container {
+  margin: 0; /* Eliminado los márgenes superior e inferior */
+  padding: 30px; /* Añadido relleno para separar el contenido del borde del navegador */
+  display: flex;
+  flex-direction: column; /* Cambiado a 'column' para distribuir las filas una debajo de la otra */
+  justify-content: space-between; /* Cambiado a 'space-between' para distribuir las filas uniformemente */
+  align-items: center;
+  height: 80vh;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las filas se ajusten al ancho del contenedor */
+}
+
+.col-md-6 {
+  width: 50%; /* Ancho del 50% para cada columna */
+  padding: 15px; /* Añadido espacio entre las columnas */
+}
+
+.imagen-container {
+  text-align: center;
+}
+
+.imagen-container img {
+  width: 50%; /* Ancho del 100% para las imágenes */
+  height: 50%; /* Altura automática para las imágenes */
+  
+/* Personalización del pie de página */
+  
+.footer {
+  margin-bottom: 50px;
+  padding: 1rem;
+}
+}
