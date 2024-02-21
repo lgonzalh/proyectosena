@@ -50,8 +50,8 @@
 }
 
 .imagen-container img {
-  width: 50%; /* Ancho del 100% para las imágenes */
-  height: 50%; /* Altura automática para las imágenes */
+  width: 25%; /* Ancho del 100% para las imágenes */
+  height: 25%; /* Altura automática para las imágenes */
   
 /* Personalización del pie de página */
   
