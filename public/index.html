@@ -1,82 +1,89 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PayTollApp</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
-      <div class="container-fluid d-flex align-items-center">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/logo.png?alt=media&token=74f8d3f5-49a9-4c14-b7ae-95c64156ba8e" alt="Logo" width="48" height="48">
-          <span style="font-size: 24px; font-weight: bold;">PayTollApp</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">Acerca de Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contáctenos</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Buscar</button>
-          </form>
-        </div>
-      </div>
-    </nav>    
-  </header>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-  <main>
-    <div class="container">
-      <div class="column">
-        <h2>Deja de hacer filas inalcanzables y aprovecha el tiempo en otras cosas</h2>
-        <img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/logo.png?alt=media&token=74f8d3f5-49a9-4c14-b7ae-95c64156ba8e" alt="Logo" width="200" height="200">
-      </div>
-      <div class="column">
-        <div class="form-container">
-          <img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/usuario.png?alt=media&token=9dae64fe-a4b3-4853-9a7d-559116cae44e" alt="Registro" width="70" height="70">
-          <input type="text" placeholder="Usuario">
-          <input type="password" placeholder="Contraseña">
-          <a href="register.html" class="registro">Registro</a>
-        </div>
-        <h4>Regístrate y sé parte de nuestra comunidad</h4>
-      </div>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/10.8.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/10.8.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.8.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/10.8.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/10.8.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/10.8.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/10.8.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/10.8.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/10.8.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/10.8.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
-  </main>
-  
-  
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-  <footer>
-    <div class="container-fluid bg-dark text-light">
-      <div class="row">
-        <div class="col-md-6">
-          <p>© 2024 PayTollApp</p>
-        </div>
-        <div class="col-md-6 text-end">
-          <a href="#"><img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/facebook.png?alt=media&token=fad26cb1-7439-4970-96d5-8c6b44ee9d4f" alt="Facebook" width="32" height="32"></a>  |  
-          <a href="#"><img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/gorjeo.png?alt=media&token=d7e1f9ab-9a0d-4521-827c-8125a66dd252" alt="X" width="32" height="32"></a>  | 
-          <a href="#"><img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/instagram.png?alt=media&token=b8507f84-8ddd-4160-a007-52e5aee8d3a3" alt="Instagram" width="32" height="32"></a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>
