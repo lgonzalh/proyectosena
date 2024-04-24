@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PayTollApp</title>
+  <link rel="icon"
+    href="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/favicon.ico?alt=media&token=fc3a6b7b-a969-47ed-aa80-744c9acf9239"
+    type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styleser.css">
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
       <div class="container-fluid d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/logo.png?alt=media&token=74f8d3f5-49a9-4c14-b7ae-95c64156ba8e" alt="Logo" width="48" height="48">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/logo.png?alt=media&token=74f8d3f5-49a9-4c14-b7ae-95c64156ba8e"
+            alt="Logo" width="48" height="48">
           <span style="font-size: 24px; font-weight: bold;">PayTollApp</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -39,7 +47,7 @@
           </form>
         </div>
       </div>
-    </nav>    
+    </nav>
   </header>
 
   <main>
@@ -47,57 +55,355 @@
       <div class="row">
         <div class="col-md-6">
           <div class="imagen-container">
-            <img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/registrar_vehiculo.png?alt=media&token=37578a36-b1aa-4d22-b7e3-3e00ae91b3b1" alt="Imagen 1">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/registrar_vehiculo.png?alt=media&token=37578a36-b1aa-4d22-b7e3-3e00ae91b3b1"
+              alt="Imagen 1">
             <h2></h2>
             <p></p>
-            <button class="btn btn-primary">Registrar Vehículo</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vehicleRegistrationModal">Registrar
+              Vehículo</button>
           </div>
+          <!-- Inicio del código insertado para modal de Registrar Vehículo -->
+          <div class="modal fade" id="vehicleRegistrationModal" tabindex="-1"
+            aria-labelledby="vehicleRegistrationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="vehicleRegistrationModalLabel">Registrar Vehículo</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="vehicleRegistrationForm">
+                    <div class="mb-3">
+                      <label for="licensePlateNumber" class="col-form-label">Placa No.:</label>
+                      <input type="text" class="form-control" id="licensePlateNumber" data-bs-toggle="tooltip"
+                        data-bs-placement="right" title="Ingresa el número de la placa del vehículo">
+                    </div>
+                    <div class="mb-3">
+                      <label for="vehicleType" class="col-form-label">Clase de Vehiculo:</label>
+                      <select class="form-select" id="vehicleType" data-bs-toggle="tooltip" data-bs-placement="right"
+                        title="Selecciona la clase de vehículo">
+                        <option value="Moto">Moto</option>
+                        <option value="Automovil">Automóvil</option>
+                        <option value="Camioneta">Camioneta</option>
+                        <option value="Bus">Bus</option>
+                        <option value="Camion">Camión</option>
+                        <option value="Tractomula">Tractomula</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="serviceType" class="col-form-label">Servicio:</label>
+                      <select class="form-select" id="serviceType" data-bs-toggle="tooltip" data-bs-placement="right"
+                        title="Selecciona el tipo de servicio del vehículo">
+                        <option value="Particular">Particular</option>
+                        <option value="Publico">Público</option>
+                        <option value="Diplomatico">Diplomático</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" form="vehicleRegistrationForm" class="btn btn-primary">Registrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Final del código insertado para modal de Registrar Vehículo -->
         </div>
         <div class="col-md-6">
           <div class="imagen-container">
-            <img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/realizar_pagos.png?alt=media&token=04740b92-4d78-4687-b8e0-9e21cf1447fa" alt="Imagen 2">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/realizar_pagos.png?alt=media&token=04740b92-4d78-4687-b8e0-9e21cf1447fa"
+              alt="Imagen 2">
             <h2></h2>
             <p></p>
-            <button class="btn btn-primary">Realizar Pagos</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentModal">Realizar Pago</button>
           </div>
+          <!-- Inicio del código insertado para modal de Realizar Pago -->
+          <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="paymentModalLabel">Realizar Pago</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="paymentForm">
+                    <!-- Método de pago -->
+                    <div class="mb-3">
+                      <label for="paymentMethod" class="col-form-label">Método de pago:</label>
+                      <select class="form-select" id="paymentMethod" data-bs-toggle="tooltip" data-bs-placement="right"
+                        title="Selecciona el método de pago">
+                        <option value="Tarjeta">Tarjeta (débito/crédito)</option>
+                        <option value="Efectivo">Efectivo</option>
+                        <option value="Nequi">Nequi</option>
+                        <option value="Daviplata">Daviplata</option>
+                        <option value="CuentaBancaria">Cuenta bancaria</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" form="paymentForm" class="btn btn-primary">Realizar Pago</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Final del código insertado para modal de Realizar Pago -->
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="imagen-container">
-            <img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/registro_pagos.png?alt=media&token=8a94b5f3-049c-4c75-8c9c-243d1570162a" alt="Imagen 3">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/registro_pagos.png?alt=media&token=8a94b5f3-049c-4c75-8c9c-243d1570162a"
+              alt="Imagen 3">
             <h2></h2>
             <p></p>
-            <button class="btn btn-primary">Registro de Pagos</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentHistoryModal">Registro de
+              Pagos</button>
+          </div>
+
+          <!-- Modal para mostrar el historial de pagos -->
+          <div class="modal fade" id="paymentHistoryModal" tabindex="-1" aria-labelledby="paymentHistoryModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="paymentHistoryModalLabel">Historial de Pagos</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="font-family: 'Courier New', Courier, monospace; font-size: 12px"">
+                  <p><strong>Referencia:</strong> PTACD1G0H01 | <strong>Valor:</strong> $15200.00 | <strong>Fecha:</strong>
+                    2023-01-10 | <strong>Método:</strong> Tarjeta (débito/crédito)</p>
+                  <p><strong>Referencia:</strong> PTACD1T0Y02 | <strong>Valor:</strong> $15200.00 | <strong>Fecha:</strong>
+                    2023-02-15 | <strong>Método:</strong> Nequi</p>
+                  <p><strong>Referencia:</strong> PTACD1W0N03 | <strong>Valor:</strong> $15200.00 | <strong>Fecha:</strong>
+                    2023-03-20 | <strong>Método:</strong> Tarjeta (débito/crédito)</p>
+                  <p><strong>Referencia:</strong> PTACD1S0Q04 | <strong>Valor:</strong> $15200.00 | <strong>Fecha:</strong>
+                    2023-04-05 | <strong>Método:</strong> Tarjeta (débito/crédito)</p>
+                  <p><strong>Referencia:</strong> PTACD1Z0R05 | <strong>Valor:</strong> $15200.00 | <strong>Fecha:</strong>
+                    2023-05-18 | <strong>Método:</strong> Nequi</p>
+                </div>
+                <div class=" modal-footer">
+                  <button type="button" class="btn btn-primary" onclick="printPaymentHistory()">Imprimir
+                    Historial</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="col-md-6">
           <div class="imagen-container">
-            <img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/solicitudes.png?alt=media&token=b3e8a3df-a66d-4671-8473-3d9d2913e8c8" alt="Imagen 4">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/solicitudes.png?alt=media&token=b3e8a3df-a66d-4671-8473-3d9d2913e8c8"
+              alt="Imagen 4">
             <h2></h2>
             <p></p>
-            <button class="btn btn-primary">Solicitudes</button>
+            <button class="btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#solicitudesModal">Solicitudes</button>
           </div>
+
+          <!-- Modal Principal -->
+          <div class="modal fade" id="solicitudesModal" tabindex="-1" aria-labelledby="solicitudesModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="solicitudesModalLabel">Centro de Solicitudes</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Tarjetas con formularios para cada tipo de solicitud -->
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Quejas, Reclamos y Preguntas</h5>
+                      <form id="formPQR">
+                        <div class="mb-3">
+                          <label for="inputPQR" class="form-label" data-bs-toggle="tooltip"
+                            title="Escribe tu queja o reclamo">Detalle de la solicitud:</label>
+                          <textarea class="form-control" id="inputPQR"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Enviar</button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Sugerencias</h5>
+                      <form id="formSugerencias">
+                        <div class="mb-3">
+                          <label for="inputSugerencia" class="form-label" data-bs-toggle="tooltip"
+                            title="Deja tu sugerencia">Tu Sugerencia:</label>
+                          <textarea class="form-control" id="inputSugerencia"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Enviar</button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Obtener Tarjeta PayToll</h5>
+                      <form id="formTarjeta">
+                        <div class="mb-3">
+                          <label for="inputDatosTarjeta" class="form-label" data-bs-toggle="tooltip"
+                            title="Solicita tu tarjeta PayToll">Datos Personales:</label>
+                          <input type="text" class="form-control" id="inputDatosTarjeta" placeholder="Nombre completo">
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Solicitar</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
   </main>
-  
-   <footer>
+
+  <footer>
     <div class="container-fluid bg-dark text-light">
       <div class="row">
         <div class="col-md-6">
           <p>© 2024 PayTollApp</p>
         </div>
         <div class="col-md-6 text-end">
-          <a href="#"><img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/facebook.png?alt=media&token=fad26cb1-7439-4970-96d5-8c6b44ee9d4f" alt="Facebook" width="32" height="32"></a>  |  
-          <a href="#"><img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/gorjeo.png?alt=media&token=d7e1f9ab-9a0d-4521-827c-8125a66dd252" alt="X" width="32" height="32"></a>  | 
-          <a href="#"><img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/instagram.png?alt=media&token=b8507f84-8ddd-4160-a007-52e5aee8d3a3" alt="Instagram" width="32" height="32"></a>
+          <a href="https://www.facebook.com/profile.php?id=61558283046052"><img
+              src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/facebook.png?alt=media&token=fad26cb1-7439-4970-96d5-8c6b44ee9d4f"
+              alt="Facebook" width="32" height="32"></a> |
+          <a href="https://twitter.com/paytoll_app"><img
+              src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/gorjeo.png?alt=media&token=d7e1f9ab-9a0d-4521-827c-8125a66dd252"
+              alt="X" width="32" height="32"></a> |
+          <a href="https://www.instagram.com/paytollapp/"><img
+              src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/instagram.png?alt=media&token=b8507f84-8ddd-4160-a007-52e5aee8d3a3"
+              alt="Instagram" width="32" height="32"></a>
         </div>
       </div>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Esperar a que el documento esté listo
+    document.addEventListener('DOMContentLoaded', function () {
+      // Inicializar tooltips
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+
+      // Manejador de eventos para cuando se envíe el formulario de registro de vehículo
+      document.getElementById('vehicleRegistrationForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Evitar que el formulario se envíe realmente
+
+        // Obtener los valores del formulario
+        var plateNumber = document.getElementById('licensePlateNumber').value;
+        var vehicleType = document.getElementById('vehicleType').value;
+        var serviceType = document.getElementById('serviceType').value;
+
+        // Crear y configurar el mensaje de confirmación
+        var confirmationMessage = 'Su ' + vehicleType + ' de Placa No. ' + plateNumber + ' Tipo de Servicio ' + (serviceType === 'Particular' ? 'Particular' : serviceType) + ' fue registrada satisfactoriamente.';
+
+        // Mostrar mensaje de confirmación, usando alert
+        alert(confirmationMessage);
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Inicializar tooltips
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+
+      // Manejador de eventos para cuando se envíe el formulario de pago
+      document.getElementById('paymentForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Evitar que el formulario se envíe realmente
+
+        // Obtener los valores del formulario
+        var paymentMethod = document.getElementById('paymentMethod').value;
+
+        // Crear y configurar el mensaje de confirmación basado en el método de pago
+        var paymentMethodDescription = {
+          'Tarjeta': 'Tarjeta (débito/crédito)',
+          'Efectivo': 'efectivo',
+          'Nequi': 'Nequi',
+          'Daviplata': 'Daviplata',
+          'CuentaBancaria': 'Cuenta bancaria'
+        };
+
+        var confirmationMessage = 'Tu pago ha sido procesado exitosamente mediante ' + paymentMethodDescription[paymentMethod] + '.';
+
+        // Mostrar mensaje de confirmación, usando alert
+        alert(confirmationMessage);
+      });
+    });
+  </script>
+
+<!--
+  <script>
+    // Esperar a que el documento esté listo
+    document.addEventListener('DOMContentLoaded', function () {
+      // Inicializar tooltips
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+    var confirmationMessage = 'Historial de pagos impresos exitosamente.'
+    alert(confirmationMessage);
+
+  </script>
+-->
+
+<script>
+  $(document).ready(function () {
+    // Cuando se envía el formulario
+    event.preventDefault();
+      // Construir el mensaje de confirmación personalizado
+      var confirmacionMensaje = 'Historial de Pagos impresos exitosamente';
+      // Mostrar el mensaje de confirmación en el modal
+      $('#mensajeConfirmacion').text(confirmacionMensaje);
+      $('#modalConfirmacion').modal
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+
+      // Añade manejadores de eventos para cada formulario
+      document.getElementById('formPQR').addEventListener('submit', function (event) {
+        event.preventDefault();
+        alert('Tu Queja, Reclamo o Pregunta ha sido enviada exitosamente.');
+      });
+
+      document.getElementById('formSugerencias').addEventListener('submit', function (event) {
+        event.preventDefault();
+        alert('Tu sugerencia ha sido enviada exitosamente.');
+      });
+
+      document.getElementById('formTarjeta').addEventListener('submit', function (event) {
+        event.preventDefault();
+        alert('Tu solicitud para obtener la Tarjeta PayToll ha sido procesada.');
+      });
+    });
+  </script>
 </body>
 </html>
