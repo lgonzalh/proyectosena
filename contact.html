@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayTollApp</title>
+  <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/favicon.ico?alt=media&token=fc3a6b7b-a969-47ed-aa80-744c9acf9239" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
+      <div class="container-fluid d-flex align-items-center">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/logo.png?alt=media&token=74f8d3f5-49a9-4c14-b7ae-95c64156ba8e"
+            alt="Logo" width="48" height="48">
+          <span style="font-size: 24px; font-weight: bold;">PayTollApp</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Acerca de Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contáctenos</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row justify-content-center align-items-start">
+        <div class="col-md-6">
+          <h2 class="text-center">Contacto</h2>
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/logo.png?alt=media&token=74f8d3f5-49a9-4c14-b7ae-95c64156ba8e"
+            alt="Logo" class="img-fluid mx-auto d-block" width="200" height="200">
+          <p class="text-center">¡Estamos aquí para ayudarte! Ponte en contacto con nosotros.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title text-center">Formulario de Contacto</h4>
+              <form>
+                <div class="form-group">
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                  <label for="correo">Correo electrónico:</label>
+                  <input type="email" id="correo" name="correo" class="form-control"
+                    placeholder="Tu correo electrónico">
+                </div>
+                <div class="form-group">
+                  <label for="mensaje">Mensaje:</label>
+                  <textarea id="mensaje" name="mensaje" class="form-control" rows="5"
+                    placeholder="Escribe tu mensaje aquí"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <div class="container-fluid bg-dark text-light">
+      <div class="row">
+        <div class="col-md-6">
+          <p>© 2024 PayTollApp</p>
+        </div>
+        <div class="col-md-6 text-end">
+          <a href="https://www.facebook.com/profile.php?id=61558283046052"><img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/facebook.png?alt=media&token=fad26cb1-7439-4970-96d5-8c6b44ee9d4f" alt="Facebook" width="32" height="32"></a> |
+          <a href="https://twitter.com/paytoll_app"><img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/gorjeo.png?alt=media&token=d7e1f9ab-9a0d-4521-827c-8125a66dd252" alt="X" width="32" height="32"></a> |
+          <a href="https://www.instagram.com/paytollapp/"><img src="https://firebasestorage.googleapis.com/v0/b/paytollapp.appspot.com/o/instagram.png?alt=media&token=b8507f84-8ddd-4160-a007-52e5aee8d3a3" alt="Instagram" width="32" height="32"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-labelledby="confirmacionModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmacionModalLabel">¡Confirmación!</h5>
+        <!--<span aria-hidden="true">&times;</span>-->
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="mensajeConfirmacion"></p>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Cuando se envía el formulario
+      $('form').submit(function (event) {
+        // Evitar el comportamiento de envío de formulario predeterminado
+        event.preventDefault();
+
+        // Obtener los valores del formulario
+        var nombre = $('#nombre').val();
+        var correo = $('#correo').val();
+        var mensaje = $('#mensaje').val();
+
+        // Construir el mensaje de confirmación personalizado
+        var confirmacionMensaje = '¡Hola ' + nombre + '! Tu mensaje "' + mensaje + '" ha sido enviado correctamente a la dirección de correo ' + correo + '.';
+
+        // Mostrar el mensaje de confirmación en el modal
+        $('#mensajeConfirmacion').text(confirmacionMensaje);
+        $('#confirmacionModal').modal('show');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
